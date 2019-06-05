@@ -147,9 +147,9 @@
 #             num += 1
             
 
-import os
-import glob
-import shutil
+# import os
+# import glob
+# import shutil
 
 
 # fnames = [f.path for f in os.scandir("downloads") if f.is_dir() ]    
@@ -425,5 +425,92 @@ import shutil
 #     shutil.move(fname, "img-%03d%s" % (i, ".jpg"))
 
 
+# import os
+# print(os.getcwd())
+
+# os.chdir("f:\\xampp\\htdocs\\Python\\NewsReader\\downloads")
+
+# for i in os.listdir('.'):
+#     print( i + ", ")
+#     print()
+
+
+# import os, sys
+
+# # Path to be created
+
+
+# os.mkdir( os.getcwd(), 0755)
+
+# print ("Path is created")
+
+# import urllib
+# import requests
+# import os
+
+# urllib.request.urlretrieve("https://github.com/foursquare/foursquair/blob/master/src/assets/fonts/Arial%20Bold.ttf")
+
+# import os
+
+# import glob
+# import shutil
+
+# print(os.getcwd())
+
+# os.chdir(".\\CaptionedImges") #changing directory to CaptionedImages
+
+# print(os.getcwd())
+
+
+# import moviepy.editor as mpe
+# my_clip = mpe.VideoFileClip('generated.avi')
+# audio_background = mpe.AudioFileClip('cut.mp3')
+# final_audio = mpe.CompositeAudioClip([my_clip.audio, audio_background])
+# final_clip = my_clip.set_audio(final_audio)
+# print('done')
+
+
+
+
+# import moviepy.editor as mp
+# audio = mp.AudioFileClip("welcome2.mp3")
+# video1 = mp.VideoFileClip("generated.mp4")	
+# video2 = mp.VideoFileClip("generated.mp4")
+
+# final = mp.concatenate_videoclips([video1, video2])
+# final = final.set_audio(audio.set_duration(final))
+# # final.write_videofile("output3.mp4", audio_codec='‘pcm_s16le') # will use 16-bit WAV
+# final.write_videofile("output2.mp4", audio_codec="libvorbis") 
+# # will use .ogg format
+
+# import numpy as np
+# import cv2
+
+# cap = cv2.VideoCapture('generated.avi')
+
+# # print cap.get(5) #to display frame rate of video
+# #print cap.get(cv2.cv.CV_CAP_PROP_FPS)
+# # img = cv2.imread('path//to//image//file')
+# # img = np.array(img, dtype=np.uint8)
+
+# while(cap.isOpened()): 
+#     ret, frame = cap.read()
+
+#     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #convert to grayscale
+
+#     # cv2.imshow('frame',gray)
+#     cv2.imshow('frame', gray)
+#     cv2.waitKey(1500)
+#     if cv2.waitKey(1) & 0xFF == ord('q'): 
+#         break
+
+# cap.release()
+# cv2.destroyAllWindows()
+
+
+# importing libraries 
+# import cv2 
+# import os
+# os.chdir("f:\\xampp\\htdocs\\Python\\NewsReader\\newfolder")
 
 

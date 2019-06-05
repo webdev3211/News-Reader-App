@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsReader </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            height: 150%;
+            background: #f6f6f6;
+            margin: 0;
+            background-image: url("https://motionarray.imgix.net/preview-71322-39bArOLq3P-low_0001.jpg?w=660&q=60&fit=max&auto=format");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+            background-blend-mode: darken;
+
+
+            height: 100%;
+        }
+
+        .bg {
+            /* The image used */
+            /* Full height */
+            /* Center and scale the image nicely */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: tomato;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin-left: 320px;
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+
+        .button:active {
+            background-color: red;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg">
+        <h1 style="text-align:center;color: white;">
+            <b>News Reader App
+                </>
+        </h1>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1">
+
+                    <form action="" method="POST" id="form">
+                        <div style="font-size: 25px;">
+                            <input type="radio" id="video" name="check1" value="Video" checked="checked">
+                            <label for="check1" style="color:white;">Video</label>
+                            <br>
+                            <input type="radio" id="audio" name="check1" value="Audio">
+                            <label for="check1" style="color:white;">Audio</label>
+
+                        </div>
+                        <br>
+                        <!-- <br>
+                                <input type="text" style="display:block; width:100%; height:40px;" name="url">
+                                <br>
+                                <button type="submit" style="margin-left: 400px; padding:15px; font-size: 20px;">Generate Video</button> -->
+
+
+                        <br>
+                        <input id="url" style="border: 2px solid gray; height:50px;" placeholder="Enter your url......." type="text" name="url" class="form-control"
+                            autocomplete="off">
+                        <br>
+                        <button class="button" id="submit"> Generate Video!</button>
+
+                        <div id="progress" class="pull-right clearfix">
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<script>
+
+    $("#submit").on('click', function (e) {
+        // e.preventDefault();
+        $("#progress").html(' <i class="fa fa-spinner fa-spin" style="color: tomato; font-size: 10.0em;" aria-hidden="true"></i></span>');
+
+        if (document.getElementById('video').checked) {
+            $("#submit").text("Generating video !");
+
+        } else if (document.getElementById('audio').checked) {
+            $("#submit").text("Generating audio !");
+
+        }
+
+
+    });
+</script>
